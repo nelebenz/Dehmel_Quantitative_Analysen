@@ -1,0 +1,78 @@
+---
+title: "Dokumentation"
+output: html_document
+date: '2022-12-06'
+---
+
+```{r}
+
+# mit GitHub repository verbinden 
+
+install.packages("usethis")
+library(usethis)
+use_git()
+use_github()
+
+```
+
+
+
+```{r}
+
+#packages installieren und laden
+
+install.packages("ggplot2")
+install.packages("gplots")
+install.packages("dplyr")
+install.packages("tidyr")
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gplots)
+
+# plot Verfassungsjahr und Wortzahl
+
+plot(Bensheimer_quanitative_Auswertung$Jahr, 
+     Bensheimer_quanitative_Auswertung$Wortzahl, 
+     xlim = c(1880, 1930), 
+     ylim = c(0, 2000), 
+     main = "Verfassungsjahr und Wortzahl", 
+     xlab = "Verfassungsjahr", 
+     ylab = "Wortzahl")
+
+# plot Briefe pro Jahr 
+
+plot(Bensheimer_Briefe_pro_Jahr$Jahr, 
+     Bensheimer_Briefe_pro_Jahr$Anzahl_Briefe, 
+     xlim = c(1880, 1930), 
+     ylim = c(0, 20), 
+     type = "l",
+     main = "Briefe pro Jahr", 
+     xlab = "Jahr", 
+     ylab = "Anzahl Briefe")
+
+# boxplot 
+
+boxplot(Bensheimer_Briefe_pro_Jahr$Jahr, 
+        main = "Briefe pro Jahr", 
+        xlab = "Jahr", 
+        ylab = "Anzahl Briefe")
+
+
+
+``` 
+
+```{r}
+
+findFunction("con")
+install.packages("list")
+library(list)
+
+
+read.table(file = "bensheimer_test.txt", header = F, nrows = 1)
+
+
+
+
+
+```
